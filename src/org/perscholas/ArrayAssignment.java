@@ -6,17 +6,17 @@ import java.util.Scanner;
 public class ArrayAssignment {
 
 	public static void main(String[] args) {
-		question1();
-		question2();
-		question3();
-		question4();
-		question5();
-		question6();
-		question7();
-		question8();
-		question9();
-		question10();
-		question11();
+//		question1();
+//		question2();
+//		question3();
+//		question4();
+//		question5();
+//		question6();
+//		question7();
+//		question8();
+//		question9();
+//		question10();
+//		question11();
 		question12();
 	}
 	public static void question1() {
@@ -69,6 +69,7 @@ public class ArrayAssignment {
 		//System.out.println(arr4[arr4.length]);
 		//arr4[5]=44;
 		//System.out.println(arr4[arr4.length]);
+		System.out.println();
 	}		
 	
 	public static void question5() {
@@ -79,8 +80,10 @@ public class ArrayAssignment {
 		
 		int[] arr5= {2,4,29,43,21};
 		for (int i = 0; i < arr5.length; i++) {
+			arr5[i]=i;
 			System.out.print(arr5[i]+" ");
 		}
+		System.out.println();
 	}
 	
 	public static void question6() {
@@ -88,11 +91,12 @@ public class ArrayAssignment {
 		 * Loop through the array and assign the value of the loop control variable multiplied by 
 		 * 2 to the corresponding index in the array.
 		 */
-		
 		int[] arr6= {2,4,29,43,21};
 		for (int i = 0; i < arr6.length; i++) {
-			System.out.print(arr6[2*i]+" ");
+			arr6[i]=2*i;
+			System.out.print(arr6[i]+" ");
 		}
+		System.out.println();
 	}
 	public static void question7() {
 		/*Write a program where you create an array of 5 elements. 
@@ -106,6 +110,7 @@ public class ArrayAssignment {
 			}
 			System.out.print(arr7[i]+" ");
 		}
+		System.out.println();
 	}
 	public static void question8() {
 		/*Write a program that creates a String array of 5 elements and 
@@ -122,6 +127,7 @@ public class ArrayAssignment {
 		for (int i = 0; i < arr8.length; i++) {
 			System.out.print(arr8[i]+ " ");
 		}
+		System.out.println();
 	}
 	public static void question9() {
 		/*Write a program that creates a String array of 5 elements and 
@@ -138,6 +144,7 @@ public class ArrayAssignment {
 		for (int i = 0; i < arr8.length; i++) {
 			System.out.print(arr8[i]+ " ");
 		}
+		System.out.println();
 	}
 	
 	public static void question10() {
@@ -162,6 +169,7 @@ public class ArrayAssignment {
 		for (int i = 0; i < arr9.length; i++) {
 			System.out.print(arr9[i]+ " ");
 		}
+		System.out.println();
 	}
 	 
 	public static void question11() {
@@ -193,16 +201,22 @@ public class ArrayAssignment {
 		System.out.println("How many favorite things do you have?");
 		int favCount=scn.nextInt();
 		String[] array = new String[favCount];
+		System.out.println(array.length);
 		
 		for (int i = 0; i < array.length; i++) {
-			System.out.print("Enter your thing: ");
-			String favThing= scn.nextLine();
+			System.out.println("Enter your thing: ");
+			String favThing= scn.next();
 			array[i]=favThing;
 		}
 		System.out.println("Your favorite things are: ");
-		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i]+ " ");
+//		for (int i = 0; i < array.length; i++) {
+//			System.out.print(array[i]+ " ");
+//		}
+		
+		for(String fav:array) {
+			System.out.println(fav+" ");
 		}
+		scn.close();
 	}
 	
 
