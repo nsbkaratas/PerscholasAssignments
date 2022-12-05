@@ -101,6 +101,7 @@ public class ControlFlow {
 		}else if (score<0 || score>100) {
 			System.out.println("Score out of range");
 		}
+		scn.close();
 	}
 	public static void question6() {
 		/*Write a program that accepts an integer between 1 and 7 from the user. 
@@ -135,11 +136,15 @@ public class ControlFlow {
 		case 7:
 			System.out.println("Sunday");
 			break;
-		
+			
 		default:
+			//less than 1 or greater than 7 (or any other input)
+			System.out.println("Out of range");
 			break;
 		}
+		scn.close();
 	}
+	
 	public static void question7() {
 		/*Create a program that lets the users input their filing status and income. 
 		 * Display how much tax the user would have to pay according to status and income.
@@ -152,7 +157,7 @@ public class ControlFlow {
 		String filingStts = scn.nextLine();
 		int income = scn.nextInt();
 		if (filingStts.equals("single")) {
-			if(0<=income && income<=8350) {
+			if(income<=8350) {
 				double tax = income*0.1;
 				System.out.println("you would have to pay "+ tax +" for taxes.");
 			}else if(8351<=income && income<=33950) {
@@ -172,7 +177,7 @@ public class ControlFlow {
 				System.out.println("you would have to pay "+ tax +" for taxes.");
 			}
 		}else if(filingStts.equals("married filing jointly")) {
-			if(0<=income && income<=16700) {
+			if(income<=16700) {
 				double tax = income*0.1;
 				System.out.println("you would have to pay "+ tax +" for taxes.");
 			}else if (16701<=income && income<=67900) {
@@ -192,7 +197,7 @@ public class ControlFlow {
 				System.out.println("you would have to pay "+ tax +" for taxes.");
 			}
 		}else if(filingStts.equals("married filing separately")) {
-			if(0<=income && income<=8350) {
+			if(income<=8350) {
 				double tax = income*0.1;
 				System.out.println("you would have to pay "+ tax +" for taxes.");
 			}else if(8351<=income && income<=33950) {
@@ -212,7 +217,7 @@ public class ControlFlow {
 				System.out.println("you would have to pay "+ tax +" for taxes.");
 			}
 		}else if(filingStts.equals("head of household")) {
-			if(0<=income && income<=11950) {
+			if(income<=11950) {
 				double tax = income*0.1;
 				System.out.println("you would have to pay "+ tax +" for taxes.");
 			}else if(11951<=income && income<=45500) {
@@ -231,6 +236,7 @@ public class ControlFlow {
 				double tax = income*.35;
 				System.out.println("you would have to pay "+ tax +" for taxes.");
 			}
+			scn.close();
 		}
 	}
 	
