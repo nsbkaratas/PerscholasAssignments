@@ -11,8 +11,6 @@ public class OperatorsAndNumbers {
 		question6();
 		question7();
 		question8();
-		question9();
-		question10();
 	}
 	public static void question1() {
 		/*Write the following integers in binary notation. 
@@ -27,26 +25,16 @@ public class OperatorsAndNumbers {
 			787        1100010011
 			33,987     1000010011000011
 			*/
-		
+		System.out.println("Decimal ---to---Binary");
+		System.out.println("1          01");
+		System.out.println("8          1000");
+		System.out.println("33         100001");
+		System.out.println("78         1001110");
+		System.out.println("787        1100010011");
+		System.out.println("33,987     1000010011000011");		
 	}
 	 
 	public static void question2() {
-
-		/*Write the following integers in binary notation. 
-		 * Do not use any Java functions or online conversion applications to calculate the answer, 
-		 * as this will hinder the learning process and your understanding of the concept. 
-		 * However, you may check your answers using Java methods.
-		 */
-	     /*  1          01
-			8          1000
-			33         100001
-			78         1001110
-			787        1100010011
-			33,987     1000010011000011
-			*/
-	}
-	public static void question3() {
-	 
 		/*Convert the following binary numbers to decimal notation. 
 		 * Do not use any Java functions or online conversion applications to calculate the answer, 
 		 * as this will hinder the learning process and your understanding of the concept. 
@@ -60,42 +48,33 @@ public class OperatorsAndNumbers {
 		0010 0001 1111         129
 		0010 1100 0110 0111    11,367
 		 */
+		System.out.println("Binary -----to-----Decimal");
+		System.out.println("0010                   2");
+		System.out.println("1001                   9");
+		System.out.println("0011 0100              56");
+		System.out.println("0111 0010              114");
+		System.out.println("0010 0001 1111         129");
+		System.out.println("0010 1100 0110 0111    11,367");
 	}
+	public static void question3() {
+		/*Write a program that declares an integer a variable x and assigns the value 2 to it and 
+		 * prints out the binary string version of the number ( Integer.toBinaryString(x) ). 
+		 * Now, use the left shift operator (<<) to shift by 1 and assign the result to x. 
+		 * Before printing the results, write a comment with the predicted decimal value and 
+		 * binary string. Now, print out x in decimal form and in binary notation.
+		 * Do the preceding exercise with the following values:
+			9
+			17
+			88
+		 */
+		int x = 2;
+		System.out.println(Integer.toBinaryString(x));
+		System.out.println(x<<1);
+	}
+	
+
+	
 	public static void question4() {
-		/*Write a program that declares an integer a variable x and assigns the value 2 to it and 
-		 * prints out the binary string version of the number ( Integer.toBinaryString(x) ). 
-		 * Now, use the left shift operator (<<) to shift by 1 and assign the result to x. 
-		 * Before printing the results, write a comment with the predicted decimal value and 
-		 * binary string. Now, print out x in decimal form and in binary notation.
-		 * Do the preceding exercise with the following values:
-			9
-			17
-			88
-		 */
-		int x = 2;
-		System.out.println(Integer.toBinaryString(x));
-		System.out.println(x<<1);
-	}
-	
-	public static void question5() {
-	 
-		/*Write a program that declares an integer a variable x and assigns the value 2 to it and 
-		 * prints out the binary string version of the number ( Integer.toBinaryString(x) ). 
-		 * Now, use the left shift operator (<<) to shift by 1 and assign the result to x. 
-		 * Before printing the results, write a comment with the predicted decimal value and 
-		 * binary string. Now, print out x in decimal form and in binary notation.
-		 * Do the preceding exercise with the following values:
-			9
-			17
-			88
-		 */
-		int x = 2;
-		System.out.println(Integer.toBinaryString(x));
-		System.out.println(x<<1);
-	
-	}
-	
-	public static void question6() {
 		/*Write a program that declares a variable x and assigns 150 to it, 
 		and prints out the binary string version of the number. 
 		Now use the right shift operator (>>) to shift by 2 and assign the result to x. 
@@ -111,8 +90,7 @@ public class OperatorsAndNumbers {
 		System.out.println(y>>2);
 	
 	}
-	public static void question7() {
-	 
+	public static void question5() {
 		/*Write a program that declares three int variables x, y, and z. 
 		 * Assign 7 to x and 17 to y. Write a comment that indicates what you predict 
 		 * will be the result of the bitwise & operation on x and y. 
@@ -130,9 +108,10 @@ public class OperatorsAndNumbers {
 		 */
 		int d = a|b;// 00010111 decimal 23
 		System.out.println(d +" this is d");
-	}
 	
-	public static void question8() {
+	}
+		
+	public static void question6() {
 		/*Write a program that declares an integer variable, assigns a number, 
 		 * and uses a postfix increment operator to increase the value. 
 		 * Print the value before and after the increment operator.
@@ -144,8 +123,7 @@ public class OperatorsAndNumbers {
 		System.out.println(num);
 	}
 	
-	public static void question9() {
-	 
+	public static void question7() {
 		/*Write a program that demonstrates at least 3 ways to increment a variable by 1  
 		 * and does this multiple times. Assign a value to an integer variable, 
 		 * print it, increment by 1, print it again, increment by 1, 
@@ -160,8 +138,8 @@ public class OperatorsAndNumbers {
 		++number;
 		System.out.println(number);
 	}
-	public static void question10() {
-	 
+	
+	public static void question8() {
 		/*Write a program that declares 2 integer variables, x, and y, 
 		 * and then assigns 5 to x and 8 to y. Create another variable sum and 
 		 * assign the value of ++x added to y, and print the result. 
@@ -177,7 +155,6 @@ public class OperatorsAndNumbers {
 		//int sum = (numX++) +numY; //Sum didn't change here
 		System.out.println(numX);
 		System.out.println(sum);
-	
 	}
-
+	
 }
