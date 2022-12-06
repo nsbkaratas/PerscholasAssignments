@@ -1,5 +1,50 @@
 package org.perscholas.inheritance;
 
+
+class Monster {
+
+	public Monster(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	//methods
+	public String attack () {
+		return "!^_&^$@+%$* I don't know how to attack!";
+	}	
+	
+}
+class FireMonster extends Monster {
+	public FireMonster(String string) {
+		super(string);
+	}
+
+	@Override
+	public String attack () {
+		return "Attack with fire!";
+	}
+	
+}
+class WaterMonster extends Monster {
+	public WaterMonster(String string) {
+		super(string);
+	}
+
+	@Override
+	public String attack () {
+		return "Attack with water!";
+	}
+}
+class StoneMonster extends Monster {
+	public StoneMonster(String string) {
+		super(string);
+	}
+
+	@Override
+	public String attack () {
+		return "Attack with stones!";
+	}
+}
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -21,8 +66,6 @@ public class Main {
 	      // We have a problem here!!!
 	      Monster m4 = new Monster("u2u2");
 	      System.out.println(m4.attack());  // garbage!!!
-
-
 	}
 
 }
