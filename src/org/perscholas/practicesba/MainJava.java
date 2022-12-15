@@ -15,7 +15,7 @@ interface ParkingSystem {
 
 class HospitalParking implements ParkingSystem{
 	int time;
-	double surcharge= 0.2;
+	double surcharge= 1.2;
 	public HospitalParking(int time) {
 		this.time = time;
 	}
@@ -24,11 +24,11 @@ class HospitalParking implements ParkingSystem{
 		
 		double price;
 		if(time>5 && time<17) {
-			price = (MORNING+1)*surcharge;
+			price = MORNING*surcharge;
 		}else if(time>17 && time<24) {
-			price= (NIGHTLY+1)*surcharge;
+			price= NIGHTLY*surcharge;
 		}else {
-			price=(TWENTY_FOUR+1)*surcharge;
+			price=TWENTY_FOUR*surcharge;
 		}
 		return price;
 		
@@ -37,7 +37,7 @@ class HospitalParking implements ParkingSystem{
 }
 class MallParking implements ParkingSystem{
 	int time;
-	double surcharge=0.1;
+	double surcharge=1.1;
 	
 	public MallParking(int time) {
 		this.time = time;
@@ -47,11 +47,11 @@ class MallParking implements ParkingSystem{
 		
 		double price;
 		if(time>5 && time<17) {
-			price = (MORNING+1)*surcharge;
+			price = MORNING*surcharge;
 		}else if(time>17 && time<24) {
-			price= (NIGHTLY+1)*surcharge;
+			price= NIGHTLY*surcharge;
 		}else {
-			price=(TWENTY_FOUR+1)*surcharge;
+			price=TWENTY_FOUR*surcharge;
 		}
 		return price;
 		
